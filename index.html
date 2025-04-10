@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site de Receitas Deliciosas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.5/font/bootstrap-icons.min.css">
+    <link rel="icon" href="caminho/para/sua/logo.ico" type="image/x-icon">
+    <style>
+        /* Estilos customizados */
+        :root {
+            --bs-primary: #ff6b6b;
+            --bs-secondary: #555;
+            --bs-light: #f8f9fa;
+            --bs-dark: #343a40;
+            --navbar-height: 60px;
+        }
+
+        body {
+            padding-top: var(--navbar-height);
+            background-color: var(--bs-light);
+            color: var(--bs-secondary);
+        }
+
+        .navbar {
+            height: var(--navbar-height);
+            background-color: #fff !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--bs-primary) !important;
+        }
+
+        .nav-link {
+            color: var(--bs-secondary) !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--bs-primary) !important;
+        }
+
+        #sidebar {
+            position: fixed;
+            top: var(--navbar-height);
+            right: -350px;
+            width: 350px;
+            height: calc(100vh - var(--navbar-height));
+            background-color: #fff;
+            border-left: 1px solid #dee2e6;
+            transition: right 0.3s ease-in-out;
+            z-index: 1050;
+            overflow-y: auto;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar.active {
+            right: 0;
+        }
+
+        #content {
+            transition: margin-right 0.3s ease-in-out;
+            padding: 20px;
+        }
+
+        #content.active {
+            margin-right: 350px;
+        }
+
+        .recipe-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            background-color: #fff;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .recipe-body {
+            padding: 15px;
+        }
+
+        .recipe-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--bs-dark);
+        }
+
+        .recipe-description {
+            color: var(--bs-secondary);
+            margin-bottom: 10px;
+        }
+
+        .recipe-ingredients {
+            color: var(--bs-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .recipe-ingredients strong {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            --bs-btn-bg: var(--bs-primary);
+            --bs-btn-border-color: var(--bs-primary);
+            --bs-btn-hover-bg: #e65a5a;
+            --bs-btn-hover-border-color: #e65a5a;
+        }
+
+        .btn-outline-secondary {
+            color: var(--bs-secondary);
+            border-color: var(--bs-secondary);
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: var(--bs-secondary);
+            border-color: var(--bs-secondary);
+            color: #fff;
+        }
+
+        /* Estilos para a área de contato */
+        #contact-section {
+            padding: 40px 0;
+            background-color: #eee;
+        }
+
+        #contact-section h2 {
+            color: var(--bs-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #contact-section .form-label {
+            color: var(--bs-secondary);
+            font-weight: bold;
+        }
+
+        #contact-section .btn-primary {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Receitas Deliciosas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recipes-section">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#entrantes-section">Entradas</a></li>
+                            <li><a class="dropdown-item" href="#pratos-principais-section">Pratos Principais</a></li>
+                            <li><a class="dropdown-item" href="#sobremesas-section">Sobremesas</a></li>
+                            <li><a class="dropdown-item" href="#bebidas-section">Bebidas</a></li>
+                            <li><a class="dropdown-item" href="#receitas-detalhadas">Reeitas Detalhadas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Contato</a>
+                    </li>
+                </ul>
+                <button id="sidebarToggle" class="btn btn-outline-secondary">
+                    <i class="bi bi-person-circle"></i> Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="p-4">
+            <h5 class="mb-3">Login</h5>
+            <hr class="mb-3">
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="seu@email.com">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" placeholder="Sua senha">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Lembrar-me</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+            <hr class="mt-3">
+            <p class="text-center"><a href="#">Esqueceu sua senha?</a></p>
+            <p class="text-center">Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <div id="content" class="container mt-4">
+        <section id="recipes-section" class="mb-5">
+            <h2 class="mb-4">Nossas Receitas Deliciosas</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://p2.trrsf.com/image/fget/cf/942/530/images.terra.com/2022/07/27/1365998432-bolo-de-cenoura-768x512.jpg" alt="Imagem do Bolo de Cenoura Fofinho">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Bolo de Cenoura Fofinho</h5>
+                            <p class="recipe-description">Um clássico bolo de cenoura com cobertura de chocolate irresistível.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Cenoura, ovos, farinha, açúcar, chocolate.</p>
+                            <a href="#receita-bolo-cenoura" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2024/04/03/368156459-penne-com-tiras-de-frango.jpg" alt="Imagem do Macarrão ao Molho Branco com Frango">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Macarrão ao Molho Branco com Frango</h5>
+                            <p class="recipe-description">Uma refeição cremosa e saborosa, perfeita para o dia a dia.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Macarrão, frango, leite, creme de leite, queijo.</p>
+                            <a href="#receita-macarrao-frango" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://www.academiaassai.com.br/sites/default/files/styles/noticia_1020x640/public/como-fazer-pao-de-queijo_easy-resize.com_.jpg?itok=vTVAo5Oq" alt="Imagem do Pão de Queijo Caseiro">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Pão de Queijo Caseiro</h5>
+                            <p class="recipe-description">Deliciosos pãezinhos de queijo quentinhos e feitos em casa.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Polvilho, queijo, ovos, leite, óleo.</p>
+                            <a href="#receita-pao-queijo" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2025/04/03/salada-caprese-t4qoggpu8w8o.jpg" alt="Imagem da Salada Caprese Fresca">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Salada Caprese Fresca</h5>
+                            <p class="recipe-description">Uma salada leve e refrescante com tomate, mussarela de búfala e manjericão.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Tomate, mussarela de búfala, manjericão, azeite.</p>
+                            <a href="#receita-salada-caprese" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="entrantes-section" class="mb-5">
+            <h2 class="mb-4">Entradas</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw0GFm_Zlrwr786Zrk-7EvezXzk79gWrGKGg&s" alt="Imagem da Salada Colorida com Molho de Mel e Mostarda">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Salada Colorida com Molho de Mel e Mostarda</h5>
+                            <p class="recipe-description">Uma salada vibrante e saborosa com diversas folhas, legumes e um molho agridoce.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Alface, tomate, pepino, cenoura, molho de mel e mostarda.</p>
+                            <a href="#receita-pao-queijo" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB3wcjJArIMNcaHDP5AXmgMsEPW-YcTMbEWw&s" alt="Imagem da Bruschetta Clássica">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Bruschetta Clássica</h5>
+                            <p class="recipe-description">Fatias de pão italiano torradas com tomate fresco, alho, manjericão e azeite.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Pão italiano, tomate, alho, manjericão, azeite.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pratos-principais-section" class="mb-5">
+            <h2 class="mb-4">Pratos Principais</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://revistanews.com.br/wp-content/uploads/2019/10/Frango-assado-com-lim%C3%A3o-siciliano-e-ervas.jpg" alt="Imagem do Frango Assado com Ervas">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Frango Assado com Ervas e Limão</h5>
+                            <p class="recipe-description">Um frango suculento e aromático assado com ervas frescas e limão.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Frango inteiro, limão, alecrim, tomilho, azeite.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwrBWVLHmraMIVJ7dUIU9wIiwumw9DTXCx8w&s" alt="Imagem da Lasanha de Carne Bolonhesa">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Lasanha de Carne Bolonhesa</h5>
+                            <p class="recipe-description">Uma lasanha clássica com camadas de massa, molho bolonhesa rico e queijo derretido.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Massa de lasanha, carne moída, tomate pelado, cebola, queijo mussarela.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpEfZ0qZa9h0VzFEBvctuwA7ueb7xffIEWzA&s" alt="Imagem do Risoto de Limão com Camarões">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Risoto de Limão com Camarões</h5>
+                            <p class="recipe-description">Um risoto leve e refrescante com o toque cítrico do limão e camarões suculentos.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Arroz arbóreo, camarões, limão, caldo de peixe, vinho branco.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://s2-g1.glbimg.com/jVPQt0Rnxe1aH8tGQaf-c9FvJPQ=/0x0:612x339/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/g/f/E4kNgAQ8CYt0a2pGl9VQ/receita-macarrao.png" alt="Imagem do Espaguete ao Pesto com Tomate Cereja">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Espaguete ao Pesto com Tomate Cereja</h5>
+                            <p class="recipe-description">Um prato de massa simples e saboroso com molho pesto fresco e tomates cereja doces.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Esp
+
+aguete, molho pesto, tomate cereja, queijo parmesão.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobremesas-section" class="mb-5">
+            <h2 class="mb-4">Sobremesas</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6gjuzMn9PgCHuEXlMopnuELtSao40XU7VmFpqavN2B7JJt_OdezuqcnACucehD5IDEWM&usqp=CAU" alt="Imagem do Bolo de Chocolate com Morangos Frescos">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Bolo de Chocolate com Morangos Frescos</h5>
+                            <p class="recipe-description">Um bolo de chocolate decadente decorado com morangos suculentos.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Farinha, açúcar, cacau em pó, ovos, morangos.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFooOwfjBjxxunGETadMURRyYhZCdTq0XkA&s" alt="Imagem da Torta de Maçã Clássica">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Torta de Maçã Clássica</h5>
+                            <p class="recipe-description">Uma torta de maçã quentinha e reconfortante com uma crosta dourada e canela.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Maçãs, farinha, manteiga, açúcar, canela.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bebidas-section" class="mb-5">
+            <h2 class="mb-4">Bebidas</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEaYJyEV5VQV3Q31zBCe-HKN29dr-SlJzB9Q&s" alt="Imagem do Suco de Laranja Natural">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Suco de Laranja Natural</h5>
+                            <p class="recipe-description">Um suco refrescante e cheio de vitamina C, perfeito para qualquer hora do dia.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Laranjas.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3lM_kICeK10Ue1jbdp6wcoqF9eDVXjCMYSw&s" alt="Imagem do Smoothie de Frutas Vermelhas">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Smoothie de Frutas Vermelhas</h5>
+                            <p class="recipe-description">Um smoothie cremoso e delicioso feito com diversas frutas vermelhas.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Morango, framboesa, amora, iogurte, leite.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="recipe-card">
+                        <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2022/09/24/1510246059-shutterstock1704562558.jpg" alt="Imagem do Café Gelado com Chantilly">
+                        <div class="recipe-body">
+                            <h5 class="recipe-title">Café Gelado com Chantilly</h5>
+                            <p class="recipe-description">Uma bebida refrescante e energizante, perfeita para os amantes de café.</p>
+                            <p class="recipe-ingredients"><strong>Ingredientes principais:</strong> Café, gelo, leite, chantilly.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Ver Receita</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+ <section id="receitas-detalhadas" class="mb-5">
+    <h2 class="mb-4">Receitas Detalhadas</h2>
+        <section id="receita-bolo-cenoura" class="recipe-detalhada container mb-5" ">
+            <h2>Bolo de Cenoura Fofinho </h2>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>[Lista de ingredientes do bolo de cenoura]</li>
+            </ul>
+            <p><strong>Modo de Preparo:</strong></p>
+            <ol>
+                <li>[Passos do modo de preparo do bolo de cenoura]</li>
+            </ol>
+               <p><strong>usuario que enviou:</strong></p>
+              <li>[usuario criado da receita]</li>
+        </section>
+
+        <section id="receita-macarrao-frango" class="recipe-detalhada container mt-4" ">
+            <h2>Macarrão ao Molho Branco com Frango</h2>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>[Lista de ingredientes do macarrão com frango]</li>
+            </ul>
+            <p><strong>Modo de Preparo:</strong></p>
+            <ol>
+                <li>[Passos do modo de preparo do macarrão com frango]</li>
+            </ol>
+               <p><strong>usuario que enviou:</strong></p>
+              <li>[usuario criado da receita]</li>
+        </section>
+
+        <section id="receita-pao-queijo" class="recipe-detalhada container mt-4">
+            <h2>Pão de Queijo Caseiro </h2>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>[Lista de ingredientes do pão de queijo]</li>
+            </ul>
+            <p><strong>Modo de Preparo:</strong></p>
+            <ol>
+                <li>[Passos do modo de preparo do pão de queijo]</li>
+            </ol>
+             <p><strong>usuario que enviou:</strong></p>
+              <li>[usuario criado da receita]</li>
+        </section>
+
+        <section id="receita-salada-caprese" class="recipe-detalhada container mt-4" >
+            <h2>Salada Caprese Fresca </h2>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>[Lista de ingredientes da salada caprese]</li>
+            </ul>
+            <p><strong>Modo de Preparo:</strong></p>
+            <ol>
+                <li>[Passos do modo de preparo da salada caprese]</li>
+            </ol>
+            <p><strong>usuario que enviou:</strong></p>
+              <li>[usuario criado da receita]</li>
+        </section>
+        </section>
+			
+ 
+ 
+        <section id="contact-section">
+            <h2 class="mb-4">Entre em Contato e Envie Sua Receita Tambem</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="seu@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Sua Receita"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+ </section>
+
+        </div>
+
+    <footer class="bg-dark text-light py-3 mt-5 text-center">
+        <p>&copy; 2025 Meu Site de Receitas Deliciosas. Todos os direitos reservados.</p>
+	<p> Seu Site de Receitas Favorito</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            content.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target) && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                content.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
