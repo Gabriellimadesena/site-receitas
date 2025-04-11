@@ -1,4 +1,4 @@
-pagina onlina:
+pagina online:
 
 https://gabriellimadesena.github.io/site-receitas/
 
