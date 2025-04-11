@@ -1,0 +1,140 @@
+:root {
+    --bs-primary: #ff6b6b;
+    --bs-secondary: #555;
+    --bs-light: #f8f9fa;
+    --bs-dark: #343a40;
+    --navbar-height: 60px;
+}
+
+body {
+    padding-top: var(--navbar-height);
+    background-color: var(--bs-light);
+    color: var(--bs-secondary);
+}
+
+.navbar {
+    height: var(--navbar-height);
+    background-color: #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--bs-primary) !important;
+}
+
+.nav-link {
+    color: var(--bs-secondary) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+#sidebar {
+    position: fixed;
+    top: var(--navbar-height);
+    right: -350px;
+    width: 350px;
+    height: calc(100vh - var(--navbar-height));
+    background-color: #fff;
+    border-left: 1px solid #dee2e6;
+    transition: right 0.3s ease-in-out;
+    z-index: 1050;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+#content {
+    transition: margin-right 0.3s ease-in-out;
+    padding: 20px;
+}
+
+#content.active {
+    margin-right: 350px;
+}
+
+.recipe-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.recipe-body {
+    padding: 15px;
+}
+
+.recipe-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--bs-dark);
+}
+
+.recipe-description {
+    color: var(--bs-secondary);
+    margin-bottom: 10px;
+}
+
+.recipe-ingredients {
+    color: var(--bs-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.recipe-ingredients strong {
+    font-weight: bold;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: #e65a5a;
+    --bs-btn-hover-border-color: #e65a5a;
+}
+
+.btn-outline-secondary {
+    color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+    color: #fff;
+}
+
+/* Estilos para a área de contato */
+#contact-section {
+    padding: 40px 0;
+    background-color: #eee;
+}
+
+#contact-section h2 {
+    color: var(--bs-dark);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact-section .form-label {
+    color: var(--bs-secondary);
+    font-weight: bold;
+}
+
+#contact-section .btn-primary {
+    width: 100%;
+}
