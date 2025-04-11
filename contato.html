@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site de Receitas Deliciosas</title>
+    <title>Receitas Deliciosas</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.5/font/bootstrap-icons.min.css">
     <link rel="icon" href="caminho/para/sua/logo.ico" type="image/x-icon">
@@ -29,7 +29,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Início</a>
                     </li>
-                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Navegar
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#contact-section">entre em contato</a></li>
+                          <li><a class="dropdown-item" href="#localizacao">onde estamos</a></li>
+                      
+                        </ul>
+                      </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contato.html">  <i class="bi bi-envelope"></i> Contato </a>
                         <li class="nav-item">
@@ -37,6 +46,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="somos.html">Quem somos</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comunidade.html">Comunidade</a>
+            </li>
                 </ul>
                 <button id="sidebarToggle" class="btn btn-outline-secondary">
                     <i class="bi bi-person-circle"></i> Login
@@ -91,19 +103,42 @@
             </div>
         </div>
     </section>
-    <section class="mt-5">
-        <h2>Onde Estamos Localizados </h2>
-        <p class="mb-4">Você pode nos encontrar em nosso escritório ou entrar em contato conosco através do e-mail abaixo:</p> 
-        <p class="mb-4">email: receitasdeliciosas@legal.com</p>  
-        <address class="bg-light p-3 rounded border mb-4">
-          <strong>Receitas Deliciosas - Sede Oficial</strong><br>
-          Rua das Panelas, 123 - Bairro Saboroso<br>
-          São Paulo - SP, Brasil<br>
-          CEP: 01234-567
-        </address>
-    </section>
-
-</section>
+    <section id="localizacao" class="mt-5 container">
+        <h2 class="mb-4 text-center">Onde Estamos Localizados</h2>
+        <div class="row justify-content-center">
+          
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-geo-alt-fill me-2 text-primary"></i>Nosso Escritório</h5>
+                <p class="card-text">Você pode nos encontrar em nossa sede oficial:</p>
+                <address>
+                  <strong>Receitas Deliciosas - Sede Oficial</strong><br>
+                  Rua das Panelas, 123 - Bairro Saboroso<br>
+                  São Paulo - SP, Brasil<br>
+                  CEP: 01234-567<br>
+                  GABRIEL LIMA - GERENTE DE RECEITAS<br>
+                  <strong>Telefone:</strong> (11) 98765-4321<br>
+                </address>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-envelope-fill me-2 text-danger"></i>Entre em Contato</h5>
+                <p class="card-text">Estamos sempre prontos para ouvir você! Fale conosco por e-mail:</p>
+                <p class="mb-0">
+                  <i class="bi bi-send-fill me-2 text-success"></i>
+                  <strong>Email:</strong> <a href="mailto:receitasdeliciosas@legal.com">receitasdeliciosas@legal.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
 
     </div>
 

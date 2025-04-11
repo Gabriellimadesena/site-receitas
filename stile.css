@@ -138,3 +138,241 @@ body {
 #contact-section .btn-primary {
     width: 100%;
 }
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.comment-author {
+    font-weight: bold;
+    margin-right: 5px;
+}
+.comment-date {
+    font-size: 0.8em;
+    color: #888;
+}
+.comment-content {
+    margin-top: 5px;
+}
+.news-block {
+    margin-bottom: 20px;
+}
+.news-block h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.big-news {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.big-news h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.small-news {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.small-news-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.small-news-item h4 {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+.news-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.community-post {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.community-post h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.community-post img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.recipe-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.recipe-card h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.recipe-card .rating {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffc107; /* Estrela amarela */
+    margin-bottom: 5px;
+}
+.recipe-card .votes {
+    font-size: 0.9em;
+    color: #666;
+}
+.top-chefs-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.top-chefs-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.top-chef-card {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.top-chef-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.top-chef-card h4 {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+.event-card {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.event-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.event-card h4 {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+.kitchen-tip-card {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.kitchen-tip-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.kitchen-tip-card h4 {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+#recipe-voting-section {
+    margin-top: 20px;
+}
+#recipe-voting-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.vote-recipe-card {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.vote-recipe-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.vote-recipe-card h4 {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+.vote-recipe-card button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.vote-recipe-card button:hover {
+    background-color: #ffb800;
+}
+
+ .text-instagram {
+color: #E4405F; /* Cor do Instagram */
+}
+.text-facebook {
+color: #1877F2; /* Cor do Facebook */
+}
+.text-twitter {
+color: #1DA1F2; /* Cor do Twitter */
+}
+.text-youtube{
+color: #FF0000; /* Cor do Youtube */
+}
+.text-tiktok {
+color: #000000; /* Cor do TikTok */
+}
+
+/* Estilo para os cards */
+.card {
+border-radius: 10px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-align: center;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+font-size: 2.5rem; /* Aumenta o tamanho dos ícones */
+}
+
+.card span {
+font-size: 1.1rem; /* Tamanho da fonte dos nomes das redes */
+}

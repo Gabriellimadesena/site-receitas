@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Deliciosas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.5/font/bootstrap-icons.min.css">
+    <link rel="icon" href="caminho/para/sua/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="stile.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Receitas Deliciosas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Navegar
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#news-section">noticias</a></li>
+                          <li><a class="dropdown-item" href="#community-section">publicações</a></li>
+                          <li><a class="dropdown-item" href="#latest-news-section">ultimas noticias</a></li>
+                          <li><a class="dropdown-item" href="#comments-section">comentarios</a></li>
+                        </ul>
+                      </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="somos.html">Quem somos</a>
+                </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="comunidade.html">Comunidade</a>
+        </li>
+                </ul>
+                <button id="sidebarToggle" class="btn btn-outline-secondary">
+                    <i class="bi bi-person-circle"></i> Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="p-4">
+            <h5 class="mb-3">Login</h5>
+            <hr class="mb-3">
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="seu@email.com">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" placeholder="Sua senha">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Lembrar-me</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+            <hr class="mt-3">
+            <p class="text-center"><a href="#">Esqueceu sua senha?</a></p>
+            <p class="text-center">Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        </div>
+    </div>
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-lg-3">
+                <section id="top-chefs-section" class="mt-5">
+                    <h2>Top Cozinheiros</h2>
+                    <div class="top-chef-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXu5kFyfjVFN4dTO-KE4kcViDX4736QeujcQ&s" alt="Chef Ana Silva">
+                        <h4>Ana Silva</h4>
+                    </div>
+                    <div class="top-chef-card">
+                        <img src="https://www.estadao.com.br/resizer/v2/3HH24WWADVATJLXXX5ATGKFQPM.jpg?auth=84dd42606d10dc78a2534bacf2c408fef377b5a9cfed2201b99c5a54b2d5fe1c" alt="Chef Carlos Oliveira">
+                        <h4>Carlos Oliveira</h4>
+                    </div>
+                    <div class="top-chef-card">
+                        <img src="https://www.estadao.com.br/resizer/v2/LHI6QZYE7VMGDC2OC4ERIUVISY.jpg?quality=80&auth=9673e17b856d4ad47f6a075e7b1a2fa76489c113db267eac578fbb5ad4c808c6&width=1200&height=630&focal=0,0" alt="Chef Mariana Souza">
+                        <h4>Mariana Souza</h4>
+                    </div>
+                    <div class="top-chef-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1qkOikkfKReqTIrZ4v63jbPGsnQJoFIsMYY4jmsSu2fECpVanY19ICh0K5zdkZ6pVq8w&usqp=CAU" alt="Chef João Pereira">
+                        <h4>João Pereira</h4>
+                    </div>
+                </section>
+                <section id="culinary-events-section" class="mt-5">
+                    <h2>Eventos Culinários</h2>
+                    <div class="event-card">
+                        <img src="https://pomerode.atende.net/static/portal/img/2024/04/25/img_4D7AA225AFDCE9053A1DF55C40BFE1C14EA9C36E_420x870.png" alt="Evento 1">
+                        <h4>Festival Gastronômico</h4>
+                    </div>
+                    <div class="event-card">
+                        <img src="https://s3.sa-east-1.amazonaws.com/conteudos.unigran.br/noticias/7ab14b2b0b68cea2.jpg" alt="Evento 2">
+                        <h4>Aula Show de Culinária</h4>
+                    </div>
+                    <div class="event-card">
+                        <img src="https://s2-g1.glbimg.com/5d5qHAa-En6NnxL-x4p9hJw0qDA=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/T/7/iciG8FRaCBmntmQey55Q/logo-caminhos.jpg" alt="Evento 3">
+                        <h4>Concurso de Receitas</h4>
+                    </div>
+                </section>
+                <section id="kitchen-utensils-section" class="mt-5">
+                    <h2>Dicas de Utensílios</h2>
+                    <div class="kitchen-tip-card">
+                        <img src="https://images.tcdn.com.br/img/img_prod/914928/faca_chef_artesanal_aco_inox_cirurgico_cabo_madeira_imbuia_515_1_f5728f2533828350e01d8dcb3b123135_20240205211339.jpg" alt="Utensílio 1">
+                        <h4>Faca do Chef</h4>
+                    </div>
+                    <div class="kitchen-tip-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBcZICW7aJE9G6-SesHvbO0zqb6qq-qxqT6Q&s" alt="Utensílio 2">
+                        <h4>Panela de Ferro</h4>
+                    </div>
+                    <div class="kitchen-tip-card">
+                        <img src="https://a-static.mlcdn.com.br/800x600/liquidificador-mondial-turbo-power-l-99-fb-preto-com-filtro-3-velocidades-550w/magazineluiza/021756700/a1845361c310e84f8c686e9443d72fd3.jpg" alt="Utensílio 3">
+                        <h4>Liquidificador</h4>
+                    </div>
+                </section>
+                 <section id="recipe-voting-section" class="mt-5">
+                    <h2>Qual receita você prefere?</h2>
+                    <div class="vote-recipe-card">
+                        <img src="https://www.estadao.com.br/resizer/v2/FIVYQFU6J5ND3PYRA6XQHR4NW4.jpg?quality=80&auth=04a93b8f4c288302da64fd8a96da7bb7cc11dff70430e4ba66587218d5b6011f&width=720&height=503&focal=0,0" alt="Bolo de Chocolate">
+                        <h4>Bolo de Chocolate</h4>
+                        <button onclick="incrementVote('chocolate')">Votar</button>
+                    </div>
+                    <div class="vote-recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFrqwlbm-vJOPP8HOY3M-L4T2uwl_JH-6bHA&s" alt="Salmão Grelhado">
+                        <h4>Salmão Grelhado</h4>
+                        <button onclick="incrementVote('salmao')">Votar</button>
+                    </div>
+                    <div class="vote-recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfnnB2_GZ3YodcIKmeFft5Jh7RIXUY4RyDdg&s" alt="Pão de Queijo">
+                        <h4>Pão de Queijo</h4>
+                        <button onclick="incrementVote('pao_de_queijo')">Votar</button>
+                    </div>
+                    <div class="vote-recipe-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREprPGqP0n3ECltZjZVGQzlt49wtAEJU_YMA&s" alt="Lasanha de Frango">
+                        <h4>Lasanha de Frango</h4>
+                        <button onclick="incrementVote('lasanha')">Votar</button>
+                    </div>
+                    <div id="vote-results" style="margin-top: 20px; font-weight: bold;"></div>
+                </section>
+            </div>
+            <div class="col-lg-6">
+                <section id="news-section" class="mt-5">
+                    <div class="news-block">
+                        <h2>O que está acontecendo no mundo da culinária</h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="big-news">
+                                    <img src="https://vejasp.abril.com.br/wp-content/uploads/2022/02/Benza_2019-11-291274.jpg?quality=70&strip=info&w=414&h=280&crop=1" alt="Novo Chef Revelação" class="news-image">
+                                    <h3>Novo Chef Revelação agita a cena gastronômica de São Paulo</h3>
+                                    <p>Conheça o jovem talento que está conquistando paladares com sua cozinha inovadora e autêntica.</p>
+                                    <p>Data: 25 de Março de 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="small-news-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDVvLeGO1iJqN_17p1KlstAm0JjhpHKaGfauera1pi1iwvFv-rh3vdZ36fY0C-A_Tf-T4&usqp=CAU" alt="Tendências Culinárias 2024" class="news-image">
+                                    <h4>As principais tendências culinárias para 2024</h4>
+                                    <p>Descubra os ingredientes e pratos que vão bombar nos restaurantes e nas redes sociais.</p>
+                                    <p>Data: 24 de Março de 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="small-news-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJDWXSjoH0oKljDvw20QqHwMSewi-vJ7uog&s" alt="Festival Gastronômico Internacional" class="news-image">
+                                    <h4>Festival Gastronômico Internacional atrai milhares de pessoas</h4>
+                                    <p>Chefs renomados de todo o mundo se reúnem para celebrar a diversidade da culinária.</p>
+                                    <p>Data: 23 de Março de 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                 <div class="small-news-item">
+                                    <img src="https://jmdurbanismo.com.br/_files/general/015.jpg" alt="Nova Cozinha Conceito" class="news-image">
+                                    <h4>Restaurante inaugura com nova cozinha conceito</h4>
+                                    <p>Ambiente moderno e pratos que valorizam os ingredientes locais.</p>
+                                    <p>Data: 22 de Março de 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="small-news-item">
+                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrKoLlC8jqpS9K1y_uNZM4_UfYygZ_TURMRA&s" alt="Dicas para Cozinhar em Casa" class="news-image">
+                                    <h4>Dicas imperdíveis para você cozinhar como um chef em casa</h4>
+                                    <p>Aprenda truques e técnicas para elevar seus pratos a um novo nível.</p>
+                                    <p>Data: 21 de Março de 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="community-section" class="mt-5">
+                    <h2>Comunidade Culinária</h2>
+                    <div class="community-post">
+                        <img src="https://s2-receitas.glbimg.com/mclPaNiX-Ljfpe6JcoY8KsQBO1Q=/1200x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2024/n/5/1XBKn2TBq4MGA6HyE37w/bolo-de-cenoura-da-vovo-laura.jpg" alt="Receita de Bolo de Cenoura" class="community-post-image">
+                        <h3>Bolo de Cenoura da Vovó</h3>
+                        <p>Receita clássica de bolo de cenoura com cobertura de chocolate, feita pela minha avó. Simplesmente delicioso!</p>
+                        <p>Postado por: Ana Silva</p>
+                        <p>Data: 20 de Março de 2024</p>
+                    </div>
+                    <div class="community-post">
+                        <img src="https://iurban.com.br/wp-content/uploads/2023/12/jantar-em-familia-jpeg.webp" alt="Preparando um jantar especial" class="community-post-image">
+                        <h3>Jantar especial para a família</h3>
+                        <p>Ontem preparei um jantar especial para a minha família: salmão ao molho de maracujá com risoto de limão. Foi um sucesso!</p>
+                        <p>Postado por: Carlos Oliveira</p>
+                         <p>Data: 18 de Março de 2024</p>
+                    </div>
+                     <div class="community-post">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqp02_yzoNKtcqsrhJWnfQTgLQAvbznxUZjw&s" alt="Pão de Fermentação Natural" class="community-post-image">
+                        <h3>Pão de Fermentação Natural</h3>
+                        <p>Finalmente consegui fazer um pão de fermentação natural perfeito! A massa ficou super leve e saborosa.</p>
+                        <p>Postado por: Mariana Souza</p>
+                         <p>Data: 15 de Março de 2024</p>
+                    </div>
+                    <div class="community-post">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhlrs-hugfSLH9GnFgCy6jYJ0k3GrGjfSTgg&s" alt="Receita de Lasanha" class="community-post-image">
+                        <h3>Lasanha de Frango com Queijo</h3>
+                        <p>Uma receita de lasanha de frango cremosa e deliciosa, perfeita para um almoço em família.</p>
+                        <p>Postado por: Roberto Almeida</p>
+                        <p>Data: 12 de Março de 2024</p>
+                    </div>
+                    <div class="community-post">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX-RyQzO2wtzC_Lrc-rp7F5JWpalEJNJ5mnA&s" alt="Torta de Maçã" class="community-post-image">
+                        <h3>Torta de Maçã Caseira</h3>
+                        <p>Uma torta de maçã clássica com massa folhada e recheio de maçãs frescas e especiarias.</p>
+                        <p>Postado por: Juliana Santos</p>
+                        <p>Data: 10 de Março de 2024</p>
+                    </div>
+                </section>
+
+                <section id="latest-news-section" class="mt-5">
+                    <h2>Últimas Notícias</h2>
+                    <div class="news-block">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="big-news">
+                                    <img src="https://vejasp.abril.com.br/wp-content/uploads/2023/09/Feriae-Mario-Panezo-031.JPG.jpg?quality=70&strip=info&w=414&h=280&crop=1" alt="Novo Chef Estrela Michelin" class="news-image">
+                                    <h3>Chef Brasileiro ganha estrela Michelin</h3>
+                                    <p>Conheça o chef que elevou a gastronomia brasileira a um novo patamar.</p>
+                                    <p>Data: 28 de Março de 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="small-news-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXHJKxmHomDaTpTykAz42T5u7MYQmYabwyag&s" alt="Feira Gastronômica Vegana" class="news-image">
+                                    <h4>Feira Gastronômica Vegana atrai grande público</h4>
+                                    <p>Evento reúne expositores com o melhor da culinária vegana.</p>
+                                    <p>Data: 27 de Março de 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="small-news-item">
+                                    <img src="https://www.facilaprender.com.br/Ecommerce/ProdutoImagens/240/FacilAprender/COMER_icone.jpg" alt="Novo Curso de Culinária Online" class="news-image">
+                                    <h4>Plataforma online lança curso de culinária para iniciantes</h4>
+                                    <p>Aprenda a cozinhar do zero com aulas práticas e receitas fáceis.</p>
+                                    <p>Data: 26 de Março de 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="comments-section" class="mt-5">
+                    <h2>Comentários</h2>
+                    <div class="comment">
+                        <span class="comment-author">João Silva</span>
+                        <span class="comment-date">10 de Março de 2024</span>
+                        <p class="comment-content">Ótimo post, muito útil!</p>
+                    </div>
+                    <div class="comment">
+                        <span class="comment-author">Maria Oliveira</span>
+                        <span class="comment-date">12 de Março de 2024</span>
+                        <p class="comment-content">Concordo, me ajudou bastante.</p>
+                    </div>
+                </section>
+
+                <div id="add-comment-section" class="mt-4">
+                    <h2>Adicionar Comentário</h2>
+                    <form id="add-comment-form">
+                        <div class="mb-3">
+                            <label for="comment-author-name" class="form-label">Nome:</label>
+                            <input type="text" class="form-control" id="comment-author-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment-content" class="form-label">Comentário:</label>
+                            <textarea class="form-control" id="comment-content" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Comentar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <section id="recipe-ratings-section" class="mt-5">
+                    <h2>Notas de Receitas</h2>
+                    <div class="recipe-card">
+                        <h4>Bolo de Chocolate Cremoso</h4>
+                        <div class="rating">★★★★★</div>
+                        <div class="votes">120 votos</div>
+                    </div>
+                    <div class="recipe-card">
+                        <h4>Salmão com Crosta de Castanhas</h4>
+                        <div class="rating">★★★★☆</div>
+                        <div class="votes">95 votos</div>
+                    </div>
+                    <div class="recipe-card">
+                        <h4>Pão de Queijo Mineiro</h4>
+                        <div class="rating">★★★★★</div>
+                        <div class="votes">210 votos</div>
+                    </div>
+                     <div class="recipe-card">
+                        <h4>Mousse de Maracujá Refrescante</h4>
+                        <div class="rating">★★★★☆</div>
+                        <div class="votes">88 votos</div>
+                    </div>
+                </section>
+                <section class="container mt-4">
+    <h2 class="text-center mb-4">Encontre-nos nas Redes Sociais</h2>
+    <div class="row justify-content-center gap-4">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="https://www.instagram.com/seuperfil" target="_blank" class="card h-100 d-flex flex-column justify-content-center align-items-center text-decoration-none p-3 bg-white border-0 shadow-sm">
+                <i class="bi bi-instagram fs-1 text-instagram mb-2"></i>
+                <span class="fw-semibold">Instagram</span>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="https://www.facebook.com/suapagina" target="_blank" class="card h-100 d-flex flex-column justify-content-center align-items-center text-decoration-none p-3 bg-white border-0 shadow-sm">
+                <i class="bi bi-facebook fs-1 text-facebook mb-2"></i>
+                <span class="fw-semibold">Facebook</span>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="https://twitter.com/seuusuario" target="_blank" class="card h-100 d-flex flex-column justify-content-center align-items-center text-decoration-none p-3 bg-white border-0 shadow-sm">
+                <i class="bi bi-twitter fs-1 text-twitter mb-2"></i>
+                <span class="fw-semibold">Twitter</span>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="https://www.youtube.com/seucanal" target="_blank" class="card h-100 d-flex flex-column justify-content-center align-items-center text-decoration-none p-3 bg-white border-0 shadow-sm">
+                <i class="bi bi-youtube fs-1 text-youtube mb-2"></i>
+                <span class="fw-semibold">YouTube</span>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="https://www.tiktok.com/@seuperfil" target="_blank" class="card h-100 d-flex flex-column justify-content-center align-items-center text-decoration-none p-3 bg-white border-0 shadow-sm">
+                <i class="bi bi-tiktok fs-1 text-tiktok mb-2"></i>
+                <span class="fw-semibold">TikTok</span>
+            </a>
+        </div>
+    </div>
+</section>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light py-3 mt-5 text-center">
+        <p>&copy; 2025 Meu Site de Receitas Deliciosas. Todos os direitos reservados.</p>
+    <p> Seu Site de Receitas Favorito</p>
+    </footer>
+   
+    <script>     const commentsSection = document.getElementById('comments-section');
+        const addCommentForm = document.getElementById('add-comment-form');
+        const commentAuthorNameInput = document.getElementById('comment-author-name');
+        const commentContentInput = document.getElementById('comment-content');
+        let votes = {
+            chocolate: 5,
+            salmao: 3,
+            pao_de_queijo: 7,
+            lasanha: 2
+        };
+
+        window.onload = function() {
+            displayVotes();
+        };
+
+        function incrementVote(recipe) {
+            votes[recipe]++;
+            displayVotes();
+        }
+
+        function displayVotes() {
+            const resultsDiv = document.getElementById('vote-results');
+            resultsDiv.innerHTML = '<p><strong>Resultados da Votação:</strong></p>';
+            for (const recipe in votes) {
+                resultsDiv.innerHTML += `<p>${recipe}: ${votes[recipe]} votos</p>`;
+            }
+        }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

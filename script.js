@@ -14,4 +14,30 @@
                 content.classList.remove('active');
             }
         });
+        
+    
+
+        addCommentForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const authorName = commentAuthorNameInput.value;
+            const commentText = commentContentInput.value;
+
+            if (authorName.trim() === '' || commentText.trim() === '') {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            const newComment = document.createElement('div');
+            newComment.classList.add('comment');
+            newComment.innerHTML = `
+                <span class="comment-author">${authorName}</span>
+                <span class="comment-date">${new Date().toLocaleDateString()}</span>
+                <p class="comment-content">${commentText}</p>
+            `;
+            commentsSection.appendChild(newComment);
+
+            commentAuthorNameInput.value = '';
+            commentContentInput.value = '';
+        })
     
