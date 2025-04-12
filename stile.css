@@ -392,3 +392,26 @@ font-size: 2.5rem; /* Aumenta o tamanho dos ícones */
 .card span {
 font-size: 1.1rem; /* Tamanho da fonte dos nomes das redes */
 }
+
+/* Removendo o estilo azul dos links */
+a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor padrão do texto */
+}
+
+/* Organizando a imagem à esquerda e o nome à direita */
+.kitchen-tip-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Espaço entre os cartões */
+}
+
+.kitchen-tip-card img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 15px; /* Espaço entre a imagem e o nome */
+}
+
+.kitchen-tip-card h4 {
+    margin: 0;
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
+}
