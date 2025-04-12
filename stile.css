@@ -459,3 +459,24 @@ a {
     margin: 0;
     font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
 }
+     
+
+
+
+
+
+/* Garante que o menu expandido tenha fundo visível no mobile */
+.navbar-collapse {
+    background-color: #fff; /* Altere para a cor que combinar com seu layout */
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #333 !important;  
+}
+
+.navbar-toggler {
+    border-color: #ccc;
+}
+/* Garante que o menu expandido tenha fundo visível no mobile */
