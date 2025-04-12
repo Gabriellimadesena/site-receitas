@@ -33,6 +33,22 @@ body {
     color: var(--bs-primary) !important;
 }
 
+/* Estilos para drpdown */
+.navbar .dropdown-menu {
+    background-color: #fff !important;
+    color: #000; /* texto preto */
+  }
+
+  .navbar .dropdown-menu a {
+    color: #000 !important;
+  }
+
+  .navbar .dropdown-menu a:hover {
+    background-color: #f8f9fa;
+  }
+/* Estilos para drpdown */
+
+
 #sidebar {
     position: fixed;
     top: var(--navbar-height);

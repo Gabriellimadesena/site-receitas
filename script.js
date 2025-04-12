@@ -1,4 +1,36 @@
+/* esccipt voto */
+const commentsSection = document.getElementById('comments-section');
+const addCommentForm = document.getElementById('add-comment-form');
+const commentAuthorNameInput = document.getElementById('comment-author-name');
+const commentContentInput = document.getElementById('comment-content');
+let votes = {
+    bolo_de_chocolate: 5,
+    salmao_grelhado: 3,
+    pao_de_queijo: 7,
+    lasanha_de_frango: 2
+};
 
+window.onload = function() {
+    displayVotes();
+};
+
+function incrementVote(recipe) {
+    votes[recipe]++;
+    displayVotes();
+}
+
+function displayVotes() {
+    const resultsDiv = document.getElementById('vote-results');
+    resultsDiv.innerHTML = '<p><strong>Resultados da Votação:</strong></p>';
+    for (const recipe in votes) {
+        resultsDiv.innerHTML += `<p>${recipe}: ${votes[recipe]} votos</p>`;
+    }
+}   
+       
+       
+/* esccipt voto */    
+
+/* esccipt barra login */
         const sidebarToggle = document.getElementById('sidebarToggle');
         const sidebar = document.getElementById('sidebar');
         const content = document.getElementById('content');
@@ -15,7 +47,9 @@
             }
         });
         
-    
+/* esccipt barra login */
+
+/* esccipt comentarios */    
 
         addCommentForm.addEventListener('submit', (event) => {
             event.preventDefault();
@@ -40,4 +74,7 @@
             commentAuthorNameInput.value = '';
             commentContentInput.value = '';
         })
-    
+ 
+/* esccipt comentarios */    
+
+       
