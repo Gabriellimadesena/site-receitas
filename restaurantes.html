@@ -28,16 +28,14 @@
                         <a class="nav-link" href="index.html">Início</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Navegar
                         </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#news-section">noticias</a></li>
-                          <li><a class="dropdown-item" href="#community-section">publicações</a></li>
-                          <li><a class="dropdown-item" href="#latest-news-section">ultimas noticias</a></li>
-                          <li><a class="dropdown-item" href="#comments-section">comentarios</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      
+                            <li><a class="dropdown-item" href="#restaurant-recommendations">Todas as Recomendações</a></li>
                         </ul>
-                      </li>
+                    </li>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contato.html">Contato</a>
@@ -190,144 +188,267 @@
                 </section>
             </div>
             <div class="col-lg-6">
-                <section id="recommended-restaurants" class="mt-5">
-                    <h2 class="mb-4">Restaurantes que Recomendados</h2>
-                    <p>Conheça nossos restaurantes parceiros! Todos são avaliados pela comunidade e oferecem experiências gastronômicas incríveis.</p>
-                    <p>Se você é um chef e gostaria de se tornar um parceiro, entre em contato conosco!</p>
-                    <p>Muitas desses das nossas receitas podem ser encontradas em nossos restaurantes parceiros.</p>
+                <section id="restaurant-recommendations" class="mt-5">
+                  <h2 class="mb-4">Restaurantes que Recomendamos</h2>
+                  <p>Conheça nossos restaurantes parceiros! Todos são avaliados pela comunidade e oferecem experiências gastronômicas incríveis.</p>
+                  <p>Se você é um chef e gostaria de se tornar um parceiro, entre em contato conosco!</p>
+                  <p>Muitas das nossas receitas podem ser encontradas em nossos restaurantes parceiros.</p>
+              
+                  <!-- Culinária Brasileira -->
+                  <section id="culinaria-brasileira" class="mt-5">
+                    <h3 class="mb-3">Culinária Brasileira</h3>
                     <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <!-- Restaurante 1 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Sabor da Serra">
-                                <div class="card-body">
-                                    <h5 class="card-title">Sabor da Serra</h5>
-                                    <p class="card-text">Culinária brasileira contemporânea com ingredientes frescos.</p>
-                                    <div class="mb-2">Nota: <strong>4.9</strong> ★★★★★</div>
-                                    <a href="https://www.exemplo.com/sabordaserra" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Restaurante 2 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1RpWzK1dlREE-QJyQ3PU_TsfvfqslL9Lu7Q&s" class="card-img-top" alt="Vista Mar">
-                                <div class="card-body">
-                                    <h5 class="card-title">Vista Mar</h5>
-                                    <p class="card-text">Frutos do mar com vista deslumbrante para o oceano.</p>
-                                    <div class="mb-2">Nota: <strong>4.6</strong> ★★★★☆</div>
-                                    <a href="https://www.exemplo.com/vistamar" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Restaurante 3 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG7-ajv0PuSFPvWk-s4g0UZ4KM1I6SqkEIdQ&s" class="card-img-top" alt="Cantina da Nonna">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cantina da Nonna</h5>
-                                    <p class="card-text">Culinária italiana tradicional em ambiente familiar.</p>
-                                    <div class="mb-2">Nota: <strong>4.7</strong> ★★★★☆</div>
-                                    <a href="https://www.exemplo.com/cantina" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Restaurante 4 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8VGABElBbJ-cNAvV2pqKplyJlvxCWha6ydg&s" class="card-img-top" alt="Urban Bistrô">
-                                <div class="card-body">
-                                    <h5 class="card-title">Urban Bistrô</h5>
-                                    <p class="card-text">Gastronomia moderna e drinks artesanais no centro.</p>
-                                    <div class="mb-2">Nota: <strong>4.5</strong> ★★★★☆</div>
-                                    <a href="https://www.exemplo.com/urbanbistro" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Restaurante 5 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="https://washington.org/sites/default/files/2024-08/BarJ_Credit_NinaPalazzolo-145.jpg" class="card-img-top" alt="Sakura Sushi Bar">
-                                <div class="card-body">
-                                    <h5 class="card-title">Sakura Sushi Bar</h5>
-                                    <p class="card-text">Tradição japonesa com ingredientes selecionados.</p>
-                                    <div class="mb-2">Nota: <strong>4.8</strong> ★★★★★</div>
-                                    <a href="https://www.exemplo.com/sakura" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Restaurante 6 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBAuywTuWD5J0gGZhrhtaF5TCn9gbWMkIBuA&s" class="card-img-top" alt="Verde Vida">
-                                <div class="card-body">
-                                    <h5 class="card-title">Verde Vida</h5>
-                                    <p class="card-text">Culinária vegana e saudável com muito sabor.</p>
-                                    <div class="mb-2">Nota: <strong>4.4</strong> ★★★★☆</div>
-                                    <a href="https://www.exemplo.com/verdevida" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Restaurante 7 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROcqofvldCRMC6nWDjIY8Ojr1mi28jWgorTw&s" class="card-img-top" alt="Magic Dinner">
-                                <div class="card-body">
-                                    <h5 class="card-title">Magic Dinner</h5>
-                                    <p class="card-text">Restaurante temático encantado com pratos criativos.</p>
-                                    <div class="mb-2">Nota: <strong>4.3</strong> ★★★★☆</div>
-                                    <a href="https://www.exemplo.com/magicdinner" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Restaurante 8 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOGJpeX6y_iub56kyjYbrmr6L-91KO-0TMQ&s" class="card-img-top" alt="Burger Station">
-                                <div class="card-body">
-                                    <h5 class="card-title">Burger Station</h5>
-                                    <p class="card-text">Hamburgueria artesanal com sabores surpreendentes.</p>
-                                    <div class="mb-2">Nota: <strong>4.6</strong> ★★★★☆</div>
-                                    <a href="https://www.exemplo.com/burgerstation" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Restaurante 9 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="https://img.freepik.com/fotos-gratis/restaurante-elegante-de-luxo-interior-de-design-moderno_53876-145393.jpg" class="card-img-top" alt="La Maison">
-                                <div class="card-body">
-                                    <h5 class="card-title">La Maison</h5>
-                                    <p class="card-text">Alta gastronomia francesa com ambiente sofisticado.</p>
-                                    <div class="mb-2">Nota: <strong>4.9</strong> ★★★★★</div>
-                                    <a href="https://www.exemplo.com/lamaison" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Restaurante 10 -->
-                        <div class="col">
-                            <div class="card h-100 shadow">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjtGimD1TWNq_33o74A_jpTw6u60atauNEaA&s" class="card-img-top" alt="Café Central">
-                                <div class="card-body">
-                                    <h5 class="card-title">Café Central</h5>
-                                    <p class="card-text">Cafés especiais, brunch e sobremesas incríveis.</p>
-                                    <div class="mb-2">Nota: <strong>4.5</strong> ★★★★☆</div>
-                                    <a href="https://www.exemplo.com/cafecentral" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
-                                </div>
+                      <!-- Restaurante: Sabor da Serra -->
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Sabor da Serra">
+                            <div class="card-body">
+                                <h5 class="card-title">Sabor da Serra</h5>
+                                <p class="card-text">Culinária brasileira contemporânea com ingredientes frescos.</p>
+                                <div class="mb-2">Nota: <strong>4.9</strong> ★★★★★</div>
+                                <a href="https://www.exemplo.com/sabordaserra" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>          
+                        </div>           
+                    </div>
+<!-- Restaurante: Sabores do Norte -->
+<div class="col">
+    <div class="card h-100 shadow">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDF4wdz2d6mU0GSaDtT66fXm9HZpxKf1Gq8w&s" class="card-img-top" alt="Sabores do Norte">
+      <div class="card-body">
+        <h5 class="card-title">Sabores do Norte</h5>
+        <p class="card-text">Experimente pratos autênticos da região amazônica com ingredientes frescos e sabores marcantes.</p>
+        <a href="restaurantes.com/saboresdonorte" class="btn btn-primary">Vistar Restaurante</a>
+      </div>
+    </div>
+  </div>
+                    </div>
+                  </section>
+              
+                  <!-- Frutos do Mar -->
+                  <section id="frutos-do-mar" class="mt-5">
+                    <h3 class="mb-3">Frutos do Mar</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <!-- Restaurante: Vista Mar -->
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1RpWzK1dlREE-QJyQ3PU_TsfvfqslL9Lu7Q&s" class="card-img-top" alt="Vista Mar">
+                            <div class="card-body">
+                                <h5 class="card-title">Vista Mar</h5>
+                                <p class="card-text">Frutos do mar com vista deslumbrante para o oceano.</p>
+                                <div class="mb-2">Nota: <strong>4.6</strong> ★★★★☆</div>
+                                <a href="https://www.exemplo.com/vistamar" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
+                        <!-- Restaurante: Maré Alta -->
+    <div class="col">
+        <div class="card h-100 shadow">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1RpWzK1dlREE-QJyQ3PU_TsfvfqslL9Lu7Q&s" class="card-img-top" alt="Maré Alta">
+          <div class="card-body">
+            <h5 class="card-title">Maré Alta</h5>
+            <p class="card-text">Deliciosos frutos do mar com uma vista incrível para o horizonte oceânico.</p>
+            <div class="mb-2">Nota: <strong>4.8</strong> ★★★★★</div>
+            <a href="https://www.exemplo.com/marealta" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+          </div>
+        </div>
+      </div>
+                    </div>
+                  </section>
+              
+                  <!-- Culinária Italiana -->
+                  <section id="culinaria-italiana" class="mt-5">
+                    <h3 class="mb-3">Culinária Italiana</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <!-- Restaurante: Cantina da Nonna -->
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG7-ajv0PuSFPvWk-s4g0UZ4KM1I6SqkEIdQ&s" class="card-img-top" alt="Cantina da Nonna">
+                            <div class="card-body">
+                                <h5 class="card-title">Cantina da Nonna</h5>
+                                <p class="card-text">Culinária italiana tradicional em ambiente familiar.</p>
+                                <div class="mb-2">Nota: <strong>4.7</strong> ★★★★☆</div>
+                                <a href="https://www.exemplo.com/cantina" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+
+                                    <!-- Restaurante: Trattoria Bella Vista -->
+                <div class="col">
+                    <div class="card h-100 shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5km0oCgVR_9oSeN_cKxac-W0R3pTlWQkpgg&s" class="card-img-top" alt="Trattoria Bella Vista">
+                    <div class="card-body">
+                        <h5 class="card-title">Trattoria Bella Vista</h5>
+                        <p class="card-text">Autêntica culinária italiana com vista panorâmica para a cidade.</p>
+                        <div class="mb-2">Nota: <strong>4.8</strong> ★★★★☆</div>
+                        <a href="https://www.exemplo.com/trattoria" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                    </div>
+                    </div>
+                </div>
+                    </div>
+                  </section>
+              
+                  <!-- Gastronomia Moderna -->
+                  <section id="gastronomia-moderna" class="mt-5">
+                    <h3 class="mb-3">Gastronomia Moderna</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <!-- Restaurante: Urban Bistrô -->
+                      <!-- Restaurante: La Maison -->
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8VGABElBbJ-cNAvV2pqKplyJlvxCWha6ydg&s" class="card-img-top" alt="Urban Bistrô">
+                            <div class="card-body">
+                                <h5 class="card-title">Urban Bistrô</h5>
+                                <p class="card-text">Gastronomia moderna e drinks artesanais no centro.</p>
+                                <div class="mb-2">Nota: <strong>4.5</strong> ★★★★☆</div>
+                                <a href="https://www.exemplo.com/urbanbistro" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://img.freepik.com/fotos-gratis/restaurante-elegante-de-luxo-interior-de-design-moderno_53876-145393.jpg" class="card-img-top" alt="La Maison">
+                            <div class="card-body">
+                                <h5 class="card-title">La Maison</h5>
+                                <p class="card-text">Alta gastronomia francesa com ambiente sofisticado.</p>
+                                <div class="mb-2">Nota: <strong>4.9</strong> ★★★★★</div>
+                                <a href="https://www.exemplo.com/lamaison" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                  </section>
+              
+                  <!-- Culinária Japonesa -->
+                  <section id="culinaria-japonesa" class="mt-5">
+                    <h3 class="mb-3">Culinária Japonesa</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <!-- Restaurante: Sakura Sushi Bar -->
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://washington.org/sites/default/files/2024-08/BarJ_Credit_NinaPalazzolo-145.jpg" class="card-img-top" alt="Sakura Sushi Bar">
+                            <div class="card-body">
+                                <h5 class="card-title">Sakura Sushi Bar</h5>
+                                <p class="card-text">Tradição japonesa com ingredientes selecionados.</p>
+                                <div class="mb-2">Nota: <strong>4.8</strong> ★★★★★</div>
+                                <a href="https://www.exemplo.com/sakura" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://images.otstatic.com/prod/26232466/2/huge.jpg" class="card-img-top" alt="Sushi House">
+                            <div class="card-body">
+                                <h5 class="card-title">Sushi House</h5>
+                                <p class="card-text">Autêntico sushi com ingredientes frescos e de qualidade.</p>
+                                <div class="mb-2">Nota: <strong>4.9</strong> ★★★★★</div>
+                                <a href="https://www.exemplo.com/sushihouse" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                  </section>
+              
+                  <!-- Culinária Vegana e Saudável -->
+                  <section id="culinaria-vegana" class="mt-5">
+                    <h3 class="mb-3">Culinária Vegana e Saudável</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <!-- Restaurante: Verde Vida -->
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBAuywTuWD5J0gGZhrhtaF5TCn9gbWMkIBuA&s" class="card-img-top" alt="Verde Vida">
+                            <div class="card-body">
+                                <h5 class="card-title">Verde Vida</h5>
+                                <p class="card-text">Culinária vegana e saudável com muito sabor.</p>
+                                <div class="mb-2">Nota: <strong>4.4</strong> ★★★★☆</div>
+                                <a href="https://www.exemplo.com/verdevida" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUdBzozyROFhFtLowZ0_Bc-KBXJg-Evy5N4g&s" class="card-img-top" alt="Natural Essence">
+                            <div class="card-body">
+                                <h5 class="card-title">Natural Essence</h5>
+                                <p class="card-text">Alimentos frescos e naturais para uma alimentação equilibrada.</p>
+                                <div class="mb-2">Nota: <strong>4.6</strong> ★★★★☆</div>
+                                <a href="https://www.exemplo.com/naturalessence" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                  </section>
+              
+                  <!-- Temáticos e Criativos -->
+                  <section id="tematicos" class="mt-5">
+                    <h3 class="mb-3">Temáticos e Criativos</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <!-- Restaurante: Magic Dinner -->
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROcqofvldCRMC6nWDjIY8Ojr1mi28jWgorTw&s" class="card-img-top" alt="Magic Dinner">
+                            <div class="card-body">
+                                <h5 class="card-title">Magic Dinner</h5>
+                                <p class="card-text">Restaurante temático encantado com pratos criativos.</p>
+                                <div class="mb-2">Nota: <strong>4.3</strong> ★★★★☆</div>
+                                <a href="https://www.exemplo.com/magicdinner" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                  </section>
+              
+                  <!-- Comida de Rua / Hamburguerias -->
+                  <section id="hamburguerias" class="mt-5">
+                    <h3 class="mb-3">Comida de Rua / Hamburguerias</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <!-- Restaurante: Burger Station -->
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOGJpeX6y_iub56kyjYbrmr6L-91KO-0TMQ&s" class="card-img-top" alt="Burger Station">
+                            <div class="card-body">
+                                <h5 class="card-title">Burger Station</h5>
+                                <p class="card-text">Hamburgueria artesanal com sabores surpreendentes.</p>
+                                <div class="mb-2">Nota: <strong>4.6</strong> ★★★★☆</div>
+                                <a href="https://www.exemplo.com/burgerstation" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                  </section>
+              
+                  <!-- Cafeterias -->
+                  <section id="cafeterias" class="mt-5">
+                    <h3 class="mb-3">Cafeterias</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                      <!-- Restaurante: Café Central -->
+                      <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjtGimD1TWNq_33o74A_jpTw6u60atauNEaA&s" class="card-img-top" alt="Café Central">
+                            <div class="card-body">
+                                <h5 class="card-title">Café Central</h5>
+                                <p class="card-text">Cafés especiais, brunch e sobremesas incríveis.</p>
+                                <div class="mb-2">Nota: <strong>4.5</strong> ★★★★☆</div>
+                                <a href="https://www.exemplo.com/cafecentral" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="https://www.torel1884.com/app/uploads/sites/1187/Bistro-big-pic-1-1024x683.jpg" class="card-img-top" alt="Bistro do Porto">
+                            <div class="card-body">
+                                <h5 class="card-title">Bistro do Porto</h5>
+                                <p class="card-text">Deliciosos pratos mediterrâneos com vista para o mar.</p>
+                                <div class="mb-2">Nota: <strong>4.7</strong> ★★★★☆</div>
+                                <a href="https://www.exemplo.com/bistrodoporto" target="_blank" class="btn btn-primary">Visitar Restaurante</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                  </section>
+              
+               
+           
             
             <div class="col-lg-3">
                 <section id="recipe-ratings-section" class="mt-5">
